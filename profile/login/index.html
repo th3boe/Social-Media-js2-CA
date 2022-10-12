@@ -7,24 +7,26 @@
     <title>Book Lovers | Log In</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
     <nav class="py-2">
         <div class="container d-flex flex-wrap">
-          <ul class="nav me-auto">
-            <li class="nav-item"><a href="index.html" class="px-4">Home</a></li>
-            <li class="nav-item"><a href="profile.html" class="px-4">Profile</a></li>
-          </ul>
-          <ul class="nav">
-            <li class="nav-item"><a href="login.html" class="active px-4">Login</a></li>
-          </ul>
+            <ul class="nav me-auto">
+              <li class="nav-item"><a href="/index.html" class="px-4">Home</a></li>
+              <li class="nav-item"><a href="/profile/login/index.html" class="active px-4">Login</a></li>
+              <li class="nav-item"><a href="/profile/register/index.html" class="px-4">Register</a></li>
+            </ul>
+            <ul class="nav">
+              <li class="nav-item"><a href="#" class="px-4">Logout</a></li>
+            </ul>
         </div>
       </nav>
       <header class="py-3 mb-4">
         <div class="container d-flex flex-wrap justify-content-center">
           <a href="index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
             <svg class="bi me-2" width="0" height="0"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4"><img src="images/Logo.png" class="logo"></span>
+            <span class="fs-4"><img src="/images/Logo.png" class="logo"></span>
           </a>
           <form class="col-12 col-lg-auto mb-6 mb-lg-0" role="search">
             <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
@@ -37,14 +39,14 @@
           <div class="card-body p-5">
             <h2 class="text-uppercase text-center mb-5">Please log In</h2>
 
-            <form action="profile.html" id="login">
+            <form id="loginForm" method="POST">
         
               <div class="form-floating mt-2">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <label for="floatingInput">Email address</label>
               </div>
               <div class="form-floating mt-2">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                 <label for="floatingPassword">Password</label>
               </div>
         
@@ -55,7 +57,7 @@
               </div>
               <button class="w-100 bttn btn-lg" type="submit">Log In</button>
             
-              <p class="text-center text-muted mt-4 mb-0">Not a member? <a href="profile/register/index.html"
+              <p class="text-center text-muted mt-4 mb-0">Not a member? <a href="/profile/register/index.html"
                 class="text-body"><u>Register here</u></a></p>
 
             </form>
@@ -65,9 +67,9 @@
 
       <footer class="py-3 my-4 mt-auto">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
-          <li class="nav-item"><a href="profile.html" class="nav-link px-2 text-muted">Profile</a></li>
-          <li class="nav-item"><a href="login.html" class="nav-link px-2 text-muted">LogIn</a></li>
+          <li class="nav-item"><a href="/index.html" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="/profile/login/index.html" class="nav-link px-2 text-muted">Login</a></li>
+          <li class="nav-item"><a href="/profile/register/index.html" class="nav-link px-2 text-muted">Register</a></li>
         </ul>
         <p class="text-center text-muted">© 2022 Benedicte Øverbø (BOE)</p>
       </footer>
