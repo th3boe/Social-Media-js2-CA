@@ -16,5 +16,8 @@ export async function register(profile) {
   });
 
   const result = await response.json();
+
+  alert("Welcome strange booklover, happy that you joined our community");
+
   return result;
 }

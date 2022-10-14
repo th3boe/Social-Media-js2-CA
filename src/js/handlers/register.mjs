@@ -11,6 +11,14 @@ export function setRegistrationFormListener() {
       const formData = new FormData(form);
       const profile = Object.fromEntries(formData.entries());
 
+      if (!profile.banner.length) {
+        delete profile.banner;
+      }
+
+      if (!profile.avatar.length) {
+        delete profile.avatar;
+      }
+
       register(profile);
     });
   }
