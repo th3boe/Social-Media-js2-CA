@@ -7,17 +7,28 @@ export async function register(profile) {
   const registerURL = API_SOCIAL_URL + action;
   const body = JSON.stringify(profile);
 
-  const response = await fetch(registerURL, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-    method,
-    body,
-  });
+  try {
+    const response = await fetch(registerURL, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: method,
+      body: body,
+    });
 
-  const result = await response.json();
+    const result = await response.json();
 
-  alert("Welcome strange booklover, happy that you joined our community");
+    console.log(response);
+    if (response.status === 201) {
+      location.href = "../../../../profile/login/";
+    }
 
-  return result;
+    if (response.status !== 201) {
+      alert("Something went wrong - user may already exist. Please try again.");
+    }
+
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
 }

@@ -10795,6 +10795,25 @@ textarea.form-control-lg {
   border-radius: 0px;
 }
 
+#logout {
+  background: none;
+  border: none;
+  color: white;
+}
+#logout:hover {
+  color: black;
+}
+
+#delete,
+.update-btn {
+  max-width: 200px;
+  align-items: center;
+}
+
+.post-btns {
+  gap: 30px;
+}
+
 nav {
   background-color: #d5a91a;
   border-bottom: 1px solid #bb9519;
@@ -10818,27 +10837,48 @@ a:link {
   text-decoration: none;
 }
 
-a {
+nav a {
   color: white;
 }
 
-a.active {
+nav a.active {
   font-weight: bold;
 }
 
-a:hover {
+nav a:hover {
   color: black;
 }
 
-.img {
+.post-image {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border: black solid 1px;
-  max-width: 400px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
-.h4 {
+.titleSinglePost {
   text-align: center;
   margin: 0 auto;
+}
+
+.bodySinglePost {
+  text-align: center;
+}
+
+h1, .h1,
+h2,
+.h2,
+p {
+  text-align: center;
+  color: black;
+}
+
+.card-text,
+.card-title {
+  text-align: center;
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */

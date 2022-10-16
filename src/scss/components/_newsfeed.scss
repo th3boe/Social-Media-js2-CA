@@ -1,7 +1,10 @@
-.singlePostImg {
+.post-image {
   box-shadow: $box-shadow-border;
   border: black solid 1px;
-  max-width: 400px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 .titleSinglePost {
@@ -11,4 +14,17 @@
 
 .bodySinglePost {
   text-align: center;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+  color: black;
+}
+
+.card-text,
+.card-title {
+  text-align: center;
+  color: black;
 }

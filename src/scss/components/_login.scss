@@ -27,3 +27,22 @@
   color: black;
   border-radius: 0px;
 }
+
+#logout {
+  background: none;
+  border: none;
+  color: white;
+  &:hover {
+    color: black;
+  }
+}
+
+#delete,
+.update-btn {
+  max-width: 200px;
+  align-items: center;
+}
+
+.post-btns {
+  gap: 30px;
+}

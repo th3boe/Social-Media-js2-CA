@@ -12,9 +12,10 @@ export async function updatePost(postData) {
   const updatePostURL = `${API_SOCIAL_URL}${action}/${postData.id}`;
 
   const response = await authFetch(updatePostURL, {
-    method,
+    method: method,
     body: JSON.stringify(postData),
   });
 
+  location.href = `../../../../post/?id=${postData.id}`;
   return await response.json();
 }

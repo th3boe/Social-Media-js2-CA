@@ -1,10 +1,11 @@
-import { getPost, updatePost } from "../api/posts/index.mjs";
+import { updatePost } from "../api/posts/index.mjs";
+import { getPost } from "../api/posts/read.mjs";
+
+const params = new URLSearchParams(document.location.search);
+const id = params.get("id");
 
 export async function setUpdatePostListener() {
   const form = document.querySelector("#editPost");
-
-  const url = new URL(location.href);
-  const id = url.searchParams.get("id");
 
   if (form) {
     const makeUpdateButton = form.querySelector("button");
@@ -16,6 +17,7 @@ export async function setUpdatePostListener() {
     form.body.value = post.body;
     form.tags.value = post.tags;
     form.media.value = post.media;
+    form.id.value = parseInt(post.id);
 
     makeUpdateButton.disabled = false;
 
@@ -25,7 +27,16 @@ export async function setUpdatePostListener() {
       const form = event.target;
       const formData = new FormData(form);
       const post = Object.fromEntries(formData.entries());
-      post.id = id;
+
+      if (!post.tags.length) {
+        delete post.tags;
+      }
+
+      if (!post.media.length) {
+        delete post.media;
+      }
+
+      post.id = parseInt(id);
 
       updatePost(post);
     });
