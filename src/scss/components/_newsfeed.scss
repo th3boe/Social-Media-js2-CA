@@ -1,0 +1,30 @@
+.post-image {
+  box-shadow: $box-shadow-border;
+  border: black solid 1px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.titleSinglePost {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bodySinglePost {
+  text-align: center;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+  color: black;
+}
+
+.card-text,
+.card-title {
+  text-align: center;
+  color: black;
+}

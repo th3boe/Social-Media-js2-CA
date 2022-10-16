@@ -1,0 +1,48 @@
+.form-signin {
+  max-width: 350px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.card {
+  box-shadow: $box-shadow-border;
+}
+
+.contact-list {
+  text-align: center;
+}
+
+.bttn {
+  background-color: $bg-nav-yellow;
+  color: white;
+  border: $border-bottom-nav;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.bttn:hover {
+  background-color: $bg-header-yellow;
+  box-shadow: $box-shadow;
+  color: black;
+  border-radius: 0px;
+}
+
+#logout {
+  background: none;
+  border: none;
+  color: white;
+  &:hover {
+    color: black;
+  }
+}
+
+#delete,
+.update-btn {
+  max-width: 200px;
+  align-items: center;
+}
+
+.post-btns {
+  gap: 30px;
+}
