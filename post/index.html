@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Lovers | Log In</title>
+    <title>Book Lovers | Post</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/src/js/index.mjs" defer type="module"></script>
@@ -12,14 +12,14 @@
 <body class="d-flex flex-column min-vh-100">
     <nav class="py-2">
         <div class="container d-flex flex-wrap">
-            <ul class="nav me-auto">
-              <li class="nav-item"><a href="/" class="px-4">Home</a></li>
-              <li class="nav-item"><a href="/profile/login/" class="active px-4">Login</a></li>
-              <li class="nav-item"><a href="/profile/register/" class="px-4">Register</a></li>
-            </ul>
-            <ul class="nav">
-              <li class="nav-item"><a href="#" class="px-4">Logout</a></li>
-            </ul>
+          <ul class="nav me-auto">
+            <li class="nav-item"><a href="/" class="active px-4">Home</a></li>
+            <li class="nav-item"><a href="/profile/login/" class="px-4">Login</a></li>
+            <li class="nav-item"><a href="/profile/register/" class="px-4">Register</a></li>
+          </ul>
+          <ul class="nav">
+            <li class="nav-item"><a href="#" class="px-4">Logout</a></li>
+          </ul>
         </div>
       </nav>
       <header class="py-3 mb-4">
@@ -34,33 +34,26 @@
         </div>
       </header>
 
-      <main class="form-signin w-100">
-        <div class="card" style="border-radius: 15px;">
-          <div class="card-body p-5">
-            <h2 class="text-uppercase text-center mb-5">Please log In</h2>
+      <main>
+        <div class="card m-2 justify-content-center">
+          <div class="border border-left border-right px-0">
+            <div class="p-3 border-bottom">
+              <h4 class="d-flex mb-2">
+                NEWSFEED <i class="far fa-xs fa-star ms-auto text-primary"></i>
+              </h4>
+              <a href="/post/create/"><button class="w-30 bttn btn-lg" type="button">New Post</button></a>
+            </div>
 
-            <form id="loginForm" method="POST">
-        
-              <div class="form-floating mt-2">
-                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mt-2">
-                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
-                <label for="floatingPassword">Password</label>
-              </div>
-        
-              <div class="checkbox mb-3 mt-2">
-                <label>
-                  <input type="checkbox" value="remember-me"> Remember me
-                </label>
-              </div>
-              <button class="w-100 bttn btn-lg" type="submit">Log In</button>
-            
-              <p class="text-center text-muted mt-4 mb-0">Not a member? <a href="/profile/register/"
-                class="text-body"><u>Register here</u></a></p>
+            <div class="card m-1 d-flex p-3 border-bottom row" id="singlePost">
+              <a href="/post/edit/"><button class="w-100 bttn btn-lg" type="button">Edit Post</button></a>
+              <a href="#"><button class="w-100 bttn btn-lg" type="button">Delete Post</button></a>
 
-            </form>
+              <h5 class="justify-content-center"></h5>
+              <img class="">
+              <div class="fluid-container"></div>
+
+            </div>
+
           </div>
         </div>
       </main>

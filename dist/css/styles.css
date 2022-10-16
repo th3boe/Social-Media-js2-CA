@@ -10830,4 +10830,15 @@ a:hover {
   color: black;
 }
 
+.img {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border: black solid 1px;
+  max-width: 400px;
+}
+
+.h4 {
+  text-align: center;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=styles.css.map */

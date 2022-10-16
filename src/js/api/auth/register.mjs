@@ -1,7 +1,7 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 
 const action = "/auth/register";
-const method = "post";
+const method = "POST";
 
 export async function register(profile) {
   const registerURL = API_SOCIAL_URL + action;
@@ -16,5 +16,8 @@ export async function register(profile) {
   });
 
   const result = await response.json();
-  console.log(result);
+
+  alert("Welcome strange booklover, happy that you joined our community");
+
+  return result;
 }
