@@ -17,10 +17,10 @@ import * as methods from "/src/js/api/posts/index.mjs";
 
 // getPost();
 
-export async function getSinglePost(id) {
-  const post = await methods.getPost(id);
-  const container = document.querySelector("#singlePost");
-  templates.renderPostTemplates(post, container);
-}
+// export async function getSinglePost(id) {
+//   const post = await methods.getPost(id);
+//   const container = document.querySelector("#singlePost");
+//   templates.renderPostTemplates(post, container);
+// }
 
-getSinglePost(id);
+// getSinglePost(id);
