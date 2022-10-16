@@ -10830,15 +10830,19 @@ a:hover {
   color: black;
 }
 
-.img {
+.singlePostImg {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border: black solid 1px;
   max-width: 400px;
 }
 
-.h4 {
+.titleSinglePost {
   text-align: center;
   margin: 0 auto;
+}
+
+.bodySinglePost {
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

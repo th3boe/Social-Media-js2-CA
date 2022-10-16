@@ -8,19 +8,29 @@ export async function login(profile) {
   const loginURL = API_SOCIAL_URL + action;
   const body = JSON.stringify(profile);
 
-  const response = await fetch(loginURL, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-    method,
-    body,
-  });
+  try {
+    const response = await fetch(loginURL, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method,
+      body,
+    });
 
-  const { accessToken, ...user } = await response.json();
+    const { accessToken, ...user } = await response.json();
 
-  storage.save("token", accessToken);
+    console.log(response);
 
-  storage.save("Profile", user);
+    if (response.status === 200) {
+      storage.save("token", accessToken);
+      storage.save("profile", user);
+      location.href = "../../../../index.html";
+    }
 
-  alert("Hello booklover, lovely to see you again");
+    if (response.status !== 200) {
+      alert("Login failed");
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
