@@ -35,15 +35,24 @@
       </header>
 
       <main>
-        <div class="card m-2">
+        <div class="card m-2 justify-content-center">
           <div class="border border-left border-right px-0">
             <div class="p-3 border-bottom">
-              <h4 class="d-flex mb-0">
-                Newsfeed <i class="far fa-xs fa-star ms-auto text-primary"></i>
+              <h4 class="d-flex mb-2">
+                NEWSFEED <i class="far fa-xs fa-star ms-auto text-primary"></i>
               </h4>
+              <a href="/post/create/"><button class="w-30 bttn btn-lg" type="button">New Post</button></a>
             </div>
 
-            <div class="card m-1 d-flex p-3 border-bottom row" id="post"></div>
+            <div class="card m-1 d-flex p-3 border-bottom row" id="singlePost">
+              <a href="/post/edit/"><button class="w-100 bttn btn-lg" type="button">Edit Post</button></a>
+              <a href="#"><button class="w-100 bttn btn-lg" type="button">Delete Post</button></a>
+
+              <h5 class="justify-content-center"></h5>
+              <img class="">
+              <div class="fluid-container"></div>
+
+            </div>
 
           </div>
         </div>
